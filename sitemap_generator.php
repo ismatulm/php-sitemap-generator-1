@@ -9,7 +9,7 @@
 		new DomAttr('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
 	);
 
-	// appending it to document
+	// appending urlset node
 	$xml->appendChild($urlset);
 
 	// entries array
@@ -26,10 +26,10 @@
 	);
 	*/
 
-	// building the xml document with your website content
+	// appending content to xml-document
 	foreach($entries as $key => $value) {
 
-		// creating permalink
+		// declaring variables
 		$permalink = $value['permalink'];
 		$lastmod = $value['lastmod'];
 		$changefreq = $value['changefreq'];
