@@ -12,7 +12,7 @@
 	// appending urlset node
 	$xml->appendChild($urlset);
 
-	// entries array
+	// declaring array for entries
 	$entries = array();
 
 	// example array
@@ -29,7 +29,7 @@
 	// appending content to xml-document
 	foreach($entries as $key => $value) {
 
-		// declaring variables
+		// declaring variables for content
 		$permalink = $value['permalink'];
 		$lastmod = $value['lastmod'];
 		$changefreq = $value['changefreq'];
@@ -44,7 +44,7 @@
 		$url->appendChild($xml->createElement('changefreq', $changefreq));
 		$url->appendChild($xml->createElement('priority', $priority));
 
-		// append url to urlset node
+		// appending url to urlset node
 		$urlset->appendChild($url);
 
 	}
